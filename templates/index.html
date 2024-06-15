@@ -1,0 +1,265 @@
+{% load static wagtailcore_tags wagtailuserbar %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            {% block title %}
+            {% if page.seo_title %}{{ page.seo_title }}{% else %}{{ page.title }}{% endif %}
+            {% endblock %}
+            {% block title_suffix %}
+            {% wagtail_site as current_site %}
+            {% if current_site and current_site.site_name %}- {{ current_site.site_name }}{% endif %}
+            {% endblock %}
+        </title>
+        {% if page.search_description %}
+        <meta name="description" content="{{ page.search_description }}" />
+        {% endif %}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {# Force all links in the live preview panel to be opened in a new tab #}
+        {% if request.in_preview_panel %}
+        <base target="_blank">
+        {% endif %}
+
+        {# Global stylesheets #}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/klever.css' %}">
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+
+
+        {% block extra_css %}
+        {# Override this in templates to add extra stylesheets #}
+        {% endblock %}
+    </head>
+
+<!-- hero home -->
+<div
+        class="relative h-screen bg-cover bg-center"
+        style="background-image: url(images/home_hero.jpg);"
+>
+    <div
+            class="absolute inset-0 bg-gradient-to-r from-black/75 to-black/50"
+    ></div>
+    <div
+            class="container mx-auto h-full flex flex-col justify-center items-start relative z-10 animate-fade-down"
+    >
+        <h1
+                class="
+        text-9xl font-bold text-white mb-4"
+        >
+            Клевер
+        </h1>
+        <h2 class="text-3xl text-white leading-normal mb-4">
+            Студия декоративного исскуства
+        </h2>
+        <div class="w-3/5 mb-4 z-10 border-t-2 border-[#8B9D83]"></div>
+        <p class="w-3/5 text-xl text-white leading-normal mb-8">
+            Клевер — это студия, где искусство встречается с вдохновением. Мы создаем
+            уникальные декоративные элементы, которые придают вашему пространству
+            неповторимый стиль и элегантность. Наши работы — это синтез традиционных
+            техник и современных тенденций, воплощенный в каждой детали.
+        </p>
+    </div>
+</div>
+<!-- end -->
+
+<!-- attraction -->
+<section class="container mx-auto py-24">
+    <div class="flex flex-col justify-center items-center">
+        <p class="text-7xl text-center">
+            <span class="text-[#8B9D83]">Посетите нас</span>, чтобы уйти от
+            повседневных забот и открыть для себя декоративное искусство
+        </p>
+    </div>
+</section>
+<!-- end -->
+
+<!-- navigation tiles -->
+<section class="container mx-auto">
+    <div class="grid grid-cols-2 gap-4">
+        <!-- cards -->
+        <a href="/contacts" class="w-full mx-auto">
+            <div class="relative overflow-hidden rounded-[4rem] shadow-lg group">
+                <div
+                        class="transition-transform duration-500 ease-in-out group-hover:scale-105"
+                >
+                    <img
+                            class="w-full h-[500px] object-cover"
+                            src="images/time_card.jpeg"
+                            alt="Description"
+                    />
+                </div>
+                <div
+                        class="absolute inset-0 bg-black/10 hover:bg-black/20 transition-all duration-300 flex items-start justify-start"
+                >
+                    <div class="text-white text-start p-8">
+                        <h3 class="text-5xl">2 студии в Касимове</h3>
+                        <div class="mt-4 z-10 border-t-2 border-[#8B9D83]"></div>
+                        <p class="text-3xl">Каждый день что-то новое!</p>
+                    </div>
+                </div>
+                <div
+                        class="absolute inset-0 bg-black/10 hover:bg-black/20 transition-all duration-300 flex items-end justify-start"
+                >
+                    <div class="text-white text-start p-8">
+                        <h3 class="text-5xl">Работаем ежедневно</h3>
+                        <p class="text-5xl">11:00 — 18:00</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <!--  -->
+        <a href="/courses" class="w-full mx-auto">
+            <div class="relative overflow-hidden rounded-[4rem] shadow-lg group">
+                <div
+                        class="transition-transform duration-500 ease-in-out group-hover:scale-105"
+                >
+                    <img
+                            class="w-full h-[500px] object-cover"
+                            src="https://optim.tildacdn.com/tild3232-3363-4430-b939-613162626530/-/cover/510x385/center/center/-/format/webp/Rectangle_58.png"
+                            alt="Description"
+                    />
+                </div>
+                <div
+                        class="absolute inset-0 bg-black/10 hover:bg-black/20 transition-all duration-300 flex items-end justify-start"
+                >
+                    <div class="text-white text-start p-8">
+                        <h3 class="text-5xl">Мастер-классы</h3>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="/products" class="w-full mx-auto">
+            <div class="relative overflow-hidden rounded-[4rem] shadow-lg group">
+                <div
+                        class="transition-transform duration-500 ease-in-out group-hover:scale-105"
+                >
+                    <img
+                            class="w-full h-[500px] object-cover"
+                            src="https://optim.tildacdn.com/tild3938-3335-4365-a133-326338643339/-/cover/509x384/center/center/-/format/webp/telegram-cloud-photo.png"
+                            alt="Description"
+                    />
+                </div>
+                <div
+                        class="absolute inset-0 bg-black/10 hover:bg-black/20 transition-all duration-300 flex items-end justify-start"
+                >
+                    <div class="text-white text-start p-8">
+                        <h3 class="text-5xl">Изделия на заказ</h3>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="/events" class="w-full mx-auto">
+            <div class="relative overflow-hidden rounded-[4rem] shadow-lg group">
+                <div
+                        class="transition-transform duration-500 ease-in-out group-hover:scale-105"
+                >
+                    <img
+                            class="w-full h-[500px] object-cover"
+                            src="images/6.jpeg"
+                            alt="Description"
+                    />
+                </div>
+                <div
+                        class="absolute inset-0 bg-black/10 hover:bg-black/20 transition-all duration-300 flex items-end justify-start"
+                >
+                    <div class="text-white text-start p-8">
+                        <h3 class="text-5xl">Меропрития</h3>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <!-- cards end -->
+    </div>
+</section>
+<!-- end -->
+
+<!-- VK card -->
+<section class="container mx-auto py-20">
+    <div class="bg-[#8B9D83] p-16 rounded-[4rem]">
+        <div class="flex flex-col gap-10">
+            <p class="text-5xl text-white">
+                Оставайтесь на связи и узнавайте первыми о наших <span
+                    class="underline decoration-[#7A4E3F]">новых</span
+            >
+                проектах, курсах и акциях. Присоединяйтесь к нашей группе, чтобы
+                <span class="underline decoration-[#7A4E3F]">не пропустить</span> ничего
+                важного.
+            </p>
+            <div class="flex justify-end items-center gap-5">
+                <p class="text-5xl text-[#7A4E3F]">А вот тут наш ВК:</p>
+                <a
+                        href="https://vk.com/decor.studio.klover"
+                        class="bg-[#7A4E3F] hover:brightness-75 transition-all duration-300 p-4 rounded-full text-white uppercase font-bold text-3xl"
+                >
+                    Нажимай!
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end -->
+
+<!-- yandex -->
+<section class="container mx-auto">
+    <div class="bg-[#E3CEC1] rounded-[4rem] p-10">
+        <div class="grid grid-cols-2 gap-10">
+            <!-- text -->
+            <div class="flex flex-col">
+                <h1 class="text-6xl">Отзывы о нашей мастерской</h1>
+                <h2 class="text-xl mt-4">
+                    Гости рассказывают о своих эмоциях после мастер-класса
+                </h2>
+                <div class="flex grow flex-col justify-between mt-6">
+                    <div class="flex justify-end">
+                        <p class="text-2xl text-white px-6 py-4 rounded-full bg-[#8B9D83]">
+                            восторг
+                        </p>
+                    </div>
+                    <div class="flex justify-start">
+                        <p class="text-2xl text-white px-6 py-4 rounded-full bg-[#8B9D83]">
+                            светлая и просторная мастерская
+                        </p>
+                    </div>
+                    <div class="flex justify-end">
+                        <p class="text-2xl text-white px-6 py-4 rounded-full bg-[#8B9D83]">
+                            уютная атмосфера
+                        </p>
+                    </div>
+                    <div class="flex justify-start">
+                        <p class="text-2xl text-white px-6 py-4 rounded-full bg-[#8B9D83]">
+                            место для творчества
+                        </p>
+                    </div>
+                    <div class="flex justify-end">
+                        <p class="text-2xl text-white px-6 py-4 rounded-full bg-[#8B9D83]">
+                            забываешь о времени
+                        </p>
+                    </div>
+                    <div class="flex justify-start">
+                        <p class="text-2xl text-white px-6 py-4 rounded-full bg-[#8B9D83]">
+                            подходит для медитации
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- api -->
+            <div style="width:560px;height:800px;overflow:hidden;position:relative;">
+                <iframe
+                        style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:2rem;box-sizing:border-box"
+                        src="https://yandex.ru/maps-reviews-widget/37116116819?comments"
+                ></iframe>
+                <a
+                        href="https://yandex.ru/maps/org/studiya_klever_masterskaya_keramika/37116116819/"
+                        target="_blank"
+                        style="box-sizing:border-box;text-decoration:none;color:#b3b3b3;font-size:10px;font-family:YS Text,sans-serif;padding:0 20px;position:absolute;bottom:8px;width:100%;text-align:center;left:0;overflow:hidden;text-overflow:ellipsis;display:block;max-height:14px;white-space:nowrap;padding:0 16px;box-sizing:border-box"
+                >Студия Клевер Мастерская Керамика на карте Касимова — Яндекс Карты</a
+                >
+            </div>
+            <!-- end -->
+        </div>
+    </div>
+</section>
+    </html>
+<!-- yandex -->
