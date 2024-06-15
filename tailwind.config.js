@@ -2,6 +2,8 @@
 module.exports = {
   content: [
     './**/templates/**/*.html',
+    './templates/*.html',
+    './**/*.html',
     './templates/**/*.html',
     './static/src/**/*.js',
     './static/src/**/*.jsx',
