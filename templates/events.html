@@ -1,7 +1,13 @@
+{% extends "base.html" %}
+{% load static wagtailcore_tags wagtailuserbar %}
+{% load static %}
+
+{% block content %}
+
 <!-- hero events -->
 <div
   class="relative h-screen bg-cover bg-center"
-  style="background-image: url(images/events_hero.jpeg);"
+  style="background-image: url(/static/images/events_hero.jpeg);"
 >
   <div
     class="absolute inset-0 bg-gradient-to-r from-black/75 to-black/50"
@@ -46,7 +52,7 @@
         >
           <img
             class="w-full h-[500px] object-cover brightness-90"
-            src="images/e1.png"
+            src="/static/images/e1.png"
             alt="Description"
           />
         </div>
@@ -69,7 +75,7 @@
         >
           <img
             class="w-full h-[500px] object-cover brightness-90"
-            src="images/e2.png"
+            src="/static/images/e2.png"
             alt="Description"
           />
         </div>
@@ -92,7 +98,7 @@
         >
           <img
             class="w-full h-[500px] object-cover brightness-90"
-            src="images/e3.png"
+            src="/static/images/e3.png"
             alt="Description"
           />
         </div>
@@ -115,7 +121,7 @@
         >
           <img
             class="w-full h-[500px] object-cover brightness-90"
-            src="images/e4.webp"
+            src="/static/images/e4.webp"
             alt="Description"
           />
         </div>
@@ -138,7 +144,7 @@
         >
           <img
             class="w-full h-[500px] object-cover brightness-90"
-            src="images/e5.jpg"
+            src="/static/images/e5.jpg"
             alt="Description"
           />
         </div>
@@ -161,7 +167,7 @@
         >
           <img
             class="w-full h-[500px] object-cover brightness-90"
-            src="images/e6.jpg"
+            src="/static/images/e6.jpg"
             alt="Description"
           />
         </div>
@@ -206,19 +212,19 @@
         <div class="flex flex-col items-end px-3">
           <img
             class="object-cover mb-6 rounded-[2rem] shadow-lg h-28 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56"
-            src="images/11.jpg"
+            src="/static/images/11.jpg"
             alt=""
           />
           <img
             class="object-cover w-20 h-20 rounded-[2rem] shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40"
-            src="images/13.jpg"
+            src="/static/images/13.jpg"
             alt=""
           />
         </div>
         <div class="px-3">
           <img
             class="object-cover w-40 h-40 rounded-[2rem] shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80"
-            src="images/12.jpg"
+            src="/static/images/12.jpg"
             alt=""
           />
         </div>
@@ -228,3 +234,4 @@
   </div>
 </section>
 <!-- end -->
+{% endblock %}

@@ -1,3 +1,9 @@
+{% extends "base.html" %}
+{% load static wagtailcore_tags wagtailuserbar %}
+{% load static %}
+
+{% block content %}
+
 <!-- hero products -->
 <div
   class="relative h-screen bg-cover bg-center"
@@ -244,7 +250,7 @@
       <!-- image -->
       <img
         class="w-full h-[720px] object-cover rounded-[2rem]"
-        src="images/XXXL (3).webp"
+        src="/static/images/XXXL (3).webp"
         alt="Form Image"
       />
       <!-- end -->
@@ -252,3 +258,4 @@
   </div>
 </section>
 <!-- end -->
+{% endblock %}

@@ -1,7 +1,13 @@
+{% extends "base.html" %}
+{% load static wagtailcore_tags wagtailuserbar %}
+{% load static %}
+
+{% block content %}
+
 <!-- hero products -->
 <div
   class="relative h-screen bg-cover bg-center"
-  style="background-image: url(images/products_hero.png);"
+  style="background-image: url(/static/images/products_hero.png);"
 >
   <div
     class="absolute inset-0 bg-gradient-to-r from-black/75 to-black/50"
@@ -47,7 +53,7 @@
         >
           <img
             class="w-full h-[500px] object-cover brightness-90"
-            src="images/p1.png"
+            src="/static/images/p1.png"
             alt="Выбор изделия"
           />
         </div>
@@ -81,7 +87,7 @@
         >
           <img
             class="w-full h-[500px] object-cover brightness-90"
-            src="images/p2.png"
+            src="/static/images/p2.png"
             alt="Заполнение формы"
           />
         </div>
@@ -114,7 +120,7 @@
         >
           <img
             class="w-full h-[500px] object-cover brightness-90"
-            src="images/p3.png"
+            src="/static/images/p3.png"
             alt="Ожидание обратной связи"
           />
         </div>
@@ -224,7 +230,7 @@
       <!-- image -->
       <img
         class="w-full h-full object-cover rounded-[2rem]"
-        src="images/form.webp"
+        src="/static/images/form.webp"
         alt="Form Image"
       />
       <!-- end -->
@@ -275,7 +281,7 @@
               >
                 <img
                   class="w-full h-[500px] object-cover brightness-90"
-                  src="images/w1.jpg"
+                  src="/static/images/w1.jpg"
                   alt="Ожидание обратной связи"
                 />
               </div>
@@ -297,7 +303,7 @@
               >
                 <img
                   class="w-full h-[500px] object-cover brightness-90"
-                  src="images/w2.jpeg"
+                  src="/static/images/w2.jpeg"
                   alt="Ожидание обратной связи"
                 />
               </div>
@@ -319,7 +325,7 @@
               >
                 <img
                   class="w-full h-[500px] object-cover brightness-90"
-                  src="images/w3.jpg"
+                  src="/static/images/w3.jpg"
                   alt="Ожидание обратной связи"
                 />
               </div>
@@ -340,3 +346,4 @@
   </div>
 </section>
 <!-- end -->
+{% endblock %}

@@ -1,7 +1,13 @@
+{% extends "base.html" %}
+{% load static wagtailcore_tags wagtailuserbar %}
+{% load static %}
+
+{% block content %}
+
 <!-- hero home -->
 <div
   class="relative h-screen bg-cover bg-center"
-  style="background-image: url(images/contacts_hero.png);"
+  style="background-image: url(/static/images/contacts_hero.png);"
 >
   <div
     class="absolute inset-0 bg-gradient-to-r from-black/75 to-black/50"
@@ -118,7 +124,7 @@
       </div>
     </div>
     <!-- image -->
-    <img class="rounded-[4rem] w-full h-[500px]" src="images/XXXL.webp" alt="" />
+    <img class="rounded-[4rem] w-full h-[500px]" src="/static/images/XXXL.webp" alt="" />
     <!-- end -->
   </div>
 </section>
@@ -145,3 +151,4 @@
     </div>
 </section>
 <!-- end -->
+{% endblock %}
