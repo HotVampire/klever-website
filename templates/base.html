@@ -1,7 +1,7 @@
 {% load static wagtailcore_tags wagtailuserbar %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth" lang="ru">
     <head>
         <meta charset="utf-8" />
         <title>
@@ -33,7 +33,7 @@
         {% endblock %}
     </head>
 
-    <body class="{% block body_class %}{% endblock %}">
+    <body class="bg-[#EDE8E2] relative {% block body_class %}{% endblock %}">
         {% wagtailuserbar %}
 
 
@@ -185,9 +185,7 @@
     <div class="mt-5">
       <p class="text-center text-[#9F9F9F] text-sm">
         © 2024 Дизайн и сайт разработан
-        <span class="underline hover:text-black transition-all duration-300">
-          <a href="https://vk.com/minddevteam">Mind</a>
-        </span>. Все права защищены.
+        <span class="underline hover:text-black transition-all duration-300"><a href="https://vk.com/minddevteam">Mind</a></span>. Все права защищены.
       </p>
     </div>
   </div>

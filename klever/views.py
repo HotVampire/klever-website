@@ -26,3 +26,5 @@ def events(request):
 def contacts(request):
     return render(request, 'contacts.html')
 
+def feedback(request):
+    return render(request, 'feedback.html')
