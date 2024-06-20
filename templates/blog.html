@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% load static wagtailcore_tags wagtailuserbar %}
+{% load static %}
+
+{% block content %}
+<!-- hero home -->
+<div class="relative h-screen bg-cover bg-center" style="background-image: url(/static/images/blog_hero.jpg);">
+    <div class="absolute inset-0 bg-gradient-to-r from-black/75 to-black/50"></div>
+    <div class="container mx-auto h-full flex flex-col justify-center items-start relative z-10 animate-fade-down">
+        <h1 class="
+        text-9xl font-bold text-white mb-4">
+            Блог
+        </h1>
+        <p class="w-3/5 text-xl text-white leading-normal mb-8">
+            Добро пожаловать в наш блог! Здесь вы найдете вдохновение, советы и истории о мире декоративного искусства.
+            Узнайте больше о наших мастер-классах, новинках и идеях для творчества.
+        </p>
+    </div>
+</div>
+<!-- end -->
+
+<!-- attraction -->
+<section class="container mx-auto py-24">
+    <div class="flex flex-col justify-center items-center">
+        <p class="text-7xl text-center">
+            Исследуйте мир <span class="text-[#8B9D83]">творчества и искусства</span> с эксклюзивными статьями и
+            вдохновляющими историями
+        </p>
+    </div>
+</section>
+<!-- end -->
+
+<!-- blog -->
+<section class="container mx-auto">
+    <div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
+        <div class="lg:flex bg-[#8B9D83] rounded-[2rem]">
+            <img class="object-cover w-full h-56 rounded-[2rem] lg:w-64"
+                src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                alt="">
+
+            <div class="flex flex-col justify-between py-6 lg:mx-6">
+                <a href="#" class="text-4xl font-semibold text-white no-underline hover:underline transition-all ease-in-out duration-300 line-clamp-2">
+                    Обновляем ассортимент детской посуды!
+                </a>
+
+                <span class="text-[#7A4E3F]">Июнь 2024</span>
+            </div>
+        </div>
+        <div class="lg:flex bg-[#8B9D83] rounded-[2rem]">
+            <img class="object-cover w-full h-56 rounded-[2rem] lg:w-64"
+                src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                alt="">
+
+            <div class="flex flex-col justify-between py-6 lg:mx-6">
+                <a href="#" class="text-4xl font-semibold text-white no-underline hover:underline transition-all ease-in-out duration-300 line-clamp-2">
+                    Весенние новинки
+                </a>
+
+                <span class="text-[#7A4E3F]">Апрель 2024</span>
+            </div>
+        </div>
+        <div class="lg:flex bg-[#8B9D83] rounded-[2rem]">
+            <img class="object-cover w-full h-56 rounded-[2rem] lg:w-64"
+                src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                alt="">
+
+            <div class="flex flex-col justify-between py-6 lg:mx-6">
+                <a href="#" class="text-4xl font-semibold text-white no-underline hover:underline transition-all ease-in-out duration-300 line-clamp-2">
+                    Мастер класс за гончарным кругом
+                </a>
+
+                <span class="text-[#7A4E3F]">Октябрь 2024</span>
+            </div>
+        </div>
+        <div class="lg:flex bg-[#8B9D83] rounded-[2rem]">
+            <img class="object-cover w-full h-56 rounded-[2rem] lg:w-64"
+                src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                alt="">
+
+            <div class="flex flex-col justify-between py-6 lg:mx-6">
+                <a href="#" class="text-4xl font-semibold text-white no-underline hover:underline transition-all ease-in-out duration-300 line-clamp-2">
+                   Городской фестиваль "Золотая ладья"
+                </a>
+
+                <span class="text-[#7A4E3F]">Октябрь 2024</span>
+            </div>
+        </div>
+        <div class="lg:flex bg-[#8B9D83] rounded-[2rem]">
+            <img class="object-cover w-full h-56 rounded-[2rem] lg:w-64"
+                src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                alt="">
+
+            <div class="flex flex-col justify-between py-6 lg:mx-6">
+                <a href="#" class="text-4xl font-semibold text-white no-underline hover:underline transition-all ease-in-out duration-300 line-clamp-2">
+                    История девочки Маши и котика
+                </a>
+
+                <span class="text-[#7A4E3F]">Октябрь 2024</span>
+            </div>
+        </div>
+        <div class="lg:flex bg-[#8B9D83] rounded-[2rem]">
+            <img class="object-cover w-full h-56 rounded-[2rem] lg:w-64"
+                src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                alt="">
+
+            <div class="flex flex-col justify-between py-6 lg:mx-6">
+                <a href="#" class="text-4xl font-semibold text-white no-underline hover:underline transition-all ease-in-out duration-300 line-clamp-2">
+                    Необычный семейный творческий мастер - класс
+                </a>
+
+                <span class="text-[#7A4E3F]">Октябрь 2024</span>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end -->
+{% endblock %}

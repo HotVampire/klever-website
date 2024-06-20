@@ -19,6 +19,7 @@ urlpatterns = [
     path("courses/", views.courses, name='courses'),
     path("products/", views.products, name='product'),
     path("feedback/", views.feedback, name='feedback'),
+    path("blog/", views.blog, name='blog'),
 ]
 
 
