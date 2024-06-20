@@ -6,6 +6,7 @@ from wagtail.admin import urls as wagtailadmin_urls
 from wagtail import urls as wagtail_urls
 from wagtail.documents import urls as wagtaildocs_urls
 
+from django.conf.urls.static import static
 from . import views
 
 urlpatterns = [
@@ -19,8 +20,9 @@ urlpatterns = [
     path("courses/", views.courses, name='courses'),
     path("products/", views.products, name='product'),
     path("feedback/", views.feedback, name='feedback'),
-    path("blog/", views.blog, name='blog'),
-]
+
+    path('blog/', include('blog.urls')),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
 if settings.DEBUG:

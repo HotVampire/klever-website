@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static wagtailcore_tags wagtailuserbar %}
+{% load static %}
+
+{% block content %}
+  <h1>{{ blogpage.title }}</h1>
+  <p><strong>{{ blogpage.date }}</strong></p>
+  <p><strong>Author: </strong>{{ blogpage.author }}</p>
+  {% if blogpage.image %}
+    <img src="{{ blogpage.image.url }}" alt="{{ blogpage.image.title }}">
+  {% endif %}
+  <div>{{ blogpage.intro }}</div>
+  <div>{{ blogpage.body|richtext }}</div>
+
+{% endblock %}

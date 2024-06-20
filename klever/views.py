@@ -26,8 +26,6 @@ def events(request):
 def contacts(request):
     return render(request, 'contacts.html')
 
+
 def feedback(request):
     return render(request, 'feedback.html')
-
-def blog(request):
-    return render(request, 'blog.html')

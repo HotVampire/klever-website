@@ -113,5 +113,18 @@
         </div>
     </div>
 </section>
+
+  <h1>{{ page.title }}</h1>
+  <div>{{ page.intro|richtext }}</div>
+
+  <ul>
+    {% for post in blogpages %}
+      <li>
+        <a href="/blog{{ post.url }}">{{ post.title }}</a>
+        <p>{{ post.date }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+
 <!-- end -->
 {% endblock %}
