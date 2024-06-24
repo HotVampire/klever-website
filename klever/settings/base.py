@@ -66,6 +66,8 @@ MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "wagtail.contrib.redirects.middleware.RedirectMiddleware",
 ]
+APPEND_SLASH = False
+
 
 ROOT_URLCONF = "klever.urls"
 
